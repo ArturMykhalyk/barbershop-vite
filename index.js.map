@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
+{"version":3,"file":"index.js","sources":["../src/js/slider.js"],"sourcesContent":["$('.single-item').slick({\n     dots: true,\n    dotsClass: \"my-dots\",\n\n}); "],"names":[],"mappings":"w3BAAA,EAAE,cAAc,EAAE,MAAM,CACnB,KAAM,GACP,UAAW,SAEf,CAAC"}
