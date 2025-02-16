@@ -1,105 +1,273 @@
-.header-container {
-    position: relative;
-
-    height: 680px;
+.header-social-list, .header-nav-list, .header-address {
+    display: none;
 }
-
-.header-social {
-
-    gap: 40px;
-    transform: rotate(-90deg);
-    position: absolute;
-    bottom: 215px;
-    left: -37px;
-}
-
-.header-social-list {
-    display: flex;
-    gap: 40px;
-}
-
-.header-social-item {}
-
-.header-social-link {
-    font-weight: 600;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: #303030;
-}
-
-.header-social-link-instagram {
-    position: relative;
-}
-
-.header-social-link-instagram::before {
-    content: '';
-    position: absolute;
-    left: -100px;
-    top: 5px;
-    width: 60px;
-    height: 1px;
-    background-color: #303030;
-}
-
-.header-hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-logo {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-right: 130px;
-}
-
-
-.header-logo-icon {}
-
 
 .header-nav {
     display: flex;
-}
-
-.header-nav-list {
-    display: flex;
-    gap: 30px;
     align-items: center;
+    max-width: 418px;
+    margin: 40px auto 0;
+    justify-content: space-between;
+
+
 }
 
-.header-nav-item {}
+.mobile-menu-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+}
 
-.header-nav-link {
+.header-logo,
+.mobile-menu-open-icon {
+    fill: #ffffff;
+}
+
+
+/****************** mobile-menu */
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    max-width: 337px;
+    height: 100%;
+
+    padding-top: 118px;
+    padding-left: 40px;
+
+    background-color: #fff;
+
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 350ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.mobile-menu-conteiner {
+    max-width: 320px;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 48px;
+    right: 31px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+.mobile-menu-close-icon {}
+
+.mobile-header-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 64px;
+
+}
+
+.mobile-header-nav-item {}
+
+.mobile-header-nav-link {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 0.1em;
-    color: #ffffff;
+    color: #303030;
 }
 
-.header-address {
+.mobile-header-nav-link-active {
+    color: #ff6c00;
+}
 
+.mobile-header-address {
     display: flex;
-    align-items: center;
-    gap: 43px;
-    margin-right: 17px;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 64px;
 }
 
-.header-address-tel {
+.mobile-header-address-tel {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #303030;
+    font-style: normal;
+
 }
 
-.header-address-btn {
+.mobile-header-address-btn {
     font-weight: 600;
     font-size: 12px;
     letter-spacing: 0.09em;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #303030;
     padding: 12px 20px;
     border: 1px solid #ff6c00;
     border-radius: 25px;
     background-color: transparent;
+    width: 194px;
+}
+
+
+.mobile-header-social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-left: 100px;
+
+}
+
+.mobile-header-social-item {}
+
+.mobile-header-social-link {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: #303030;
+    position: relative;
+}
+
+.header-social-link-instagram::before {
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: #303030;
+
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 756px) {
+    .mobile-menu-open {
+        display: none;
+    }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+    .header-container {
+        position: relative;
+        height: 680px;
+    }
+
+    .header-social {
+
+        gap: 40px;
+        transform: rotate(-90deg);
+        position: absolute;
+        bottom: 215px;
+        left: -37px;
+    }
+
+    .header-social-list {
+        display: flex;
+        gap: 40px;
+    }
+
+    .header-social-item {}
+
+    .header-social-link {
+        font-weight: 600;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        color: #303030;
+    }
+
+    .header-social-link-instagram {
+        position: relative;
+    }
+
+    .header-social-link-instagram::before {
+        content: '';
+        position: absolute;
+        left: -100px;
+        top: 5px;
+        width: 60px;
+        height: 1px;
+        background-color: #303030;
+    }
+
+    .header-hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-right: 130px;
+    }
+
+
+    .header-logo-icon {}
+
+
+    .header-nav {
+        display: flex;
+    }
+
+    .header-nav-list {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .header-nav-item {}
+
+    .header-nav-link {
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        color: #ffffff;
+    }
+
+    .header-address {
+
+        display: flex;
+        align-items: center;
+        gap: 43px;
+        margin-right: 17px;
+    }
+
+    .header-address-tel {
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+
+    .header-address-btn {
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 12px 20px;
+        border: 1px solid #ff6c00;
+        border-radius: 25px;
+        background-color: transparent;
+    }
 }

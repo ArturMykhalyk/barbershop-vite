@@ -1,23 +1,22 @@
 /* Styles for Mobile devices */
 .container {
   margin: 0 auto;
-  padding: 0 15px;
-  width: 1200px;
+  padding: 0;
+  width: 480px;
 }
 
 /* Styles for Tablet devices */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 756px) {
   .container {
-    margin: 0 auto;
-    padding: 0 15px;
-    width: 1200px;
+    padding: 0 39px;
+    width: 756px;
   }
 }
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
   .container {
-    margin: 0 auto;
+
     padding: 0 15px;
     width: 1200px;
   }
