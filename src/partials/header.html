@@ -1,19 +1,46 @@
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+  <div class="container header-container">
+    <div class="header-social">
+      <ul class="header-social-list">
+        <li class="header-social-item">
+          <a class="header-social-link header-social-link-instagram" href=""
+            >Instagram</a
+          >
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="header-social-item">
+          <a class="header-social-link" href="">Youtube</a>
         </li>
       </ul>
-    </nav>
+    </div>
+
+    <div class="header-hero">
+      <nav class="header-nav">
+        <a class="header-logo" href="./index.html">
+          <svg class="header-logo-icon" width="69" height="56">
+            <use href="/img/icon/icons.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <ul class="header-nav-list">
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="#!">About</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="#!">Services and prices</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="#!">Barbers</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="#!">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="header-address">
+        <a class="header-address-tel" href="tel:+380441111111"
+          >+38 044 111 11 11</a
+        >
+        <button class="header-address-btn" type="button">Online-booking</button>
+      </address>
+    </div>
   </div>
 </header>
